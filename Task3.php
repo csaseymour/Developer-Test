@@ -1,6 +1,7 @@
 <?php
 	function next_binary_number($in){
 		$binary = $in;
+		$out=array();
 		for ($i = sizeof($binary) - 1; $i >= 0; $i--) { 
 			if ($binary[$i] == 0){
 				$binary[$i] = 1;
@@ -11,7 +12,9 @@
 			}
 		}
 		for ($i=0; $i < sizeof($binary); $i++) { 
-			echo $binary[$i];
+			//echo $binary[$i];
+			array_push($out, $binary[$i]);
 		}
+		return $out;
 	}
 ?>
